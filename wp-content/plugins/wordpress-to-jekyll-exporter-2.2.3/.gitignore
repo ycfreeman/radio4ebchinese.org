@@ -1,0 +1,8 @@
+#composer bloat
+vendor/**/docs
+vendor/**/test
+vendor/**/tests
+vendor/**/features
+vendor/**/*.md
+vendor/**/*.js
+vendor/**/*.css

@@ -1,0 +1,11 @@
+.chrs-options-wrap {width:98%;}
+
+.chrs-options-wrap .updated {width:98%;margin-left: 0 !important;}
+
+.chrs-settings-block h3 { padding: 10px; font-weight: normal !important; letter-spacing: 1px; font-size: 18px;background:#0074A2;color:#fff !important }
+.chrs-settings-block th { width:150px;text-align:left;}
+.chrs-settings-block input[type=text],
+.chrs-settings-block textarea {display:block;margin-bottom:5px;padding:3px;width:500px;font-size:12px !important}
+.chrs-settings-block label {display:block;font-size:12px;margin-bottom:10px;}
+
+.chrs-settings-block code {padding:5px 10px;}
