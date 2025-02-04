@@ -2,7 +2,10 @@
   "name": "radio4ebchinese.org",
   "version": "0.0.0",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
+  },
+  "overrides": {
+    "react": "18.2.0"
   },
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "8.0.0",
@@ -15,7 +18,7 @@
     "gatsby-plugin-image": "3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-mdx": "5.9.0",
-    "gatsby-plugin-pnpm-gatsby-5": "^1.2.11",
+    "gatsby-plugin-pnpm-gatsby-5": "1.2.11",
     "gatsby-plugin-purgecss": "6.2.1",
     "gatsby-plugin-react-helmet": "6.9.0",
     "gatsby-plugin-sass": "6.9.0",
@@ -41,7 +44,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
     "start": "$npm_execpath run dev",
@@ -52,6 +54,5 @@
   },
   "devDependencies": {
     "prettier": "2.8.7"
-  },
-  "packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589"
+  }
 }
