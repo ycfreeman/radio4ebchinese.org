@@ -1,59 +1,34 @@
 {
   "name": "radio4ebchinese.org",
-  "version": "0.0.0",
-  "engines": {
-    "node": "22.x"
-  },
-  "overrides": {
-    "react": "18.2.0"
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "8.0.0",
-    "@mdx-js/mdx": "2.3.0",
-    "@mdx-js/react": "2.3.0",
-    "bulma-scss": "0.9.4",
-    "gatsby": "5.9.0",
-    "gatsby-image": "2.11.0",
-    "gatsby-plugin-google-gtag": "^5.13.1",
-    "gatsby-plugin-image": "3.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-mdx": "5.9.0",
-    "gatsby-plugin-pnpm-gatsby-5": "1.2.11",
-    "gatsby-plugin-purgecss": "6.2.1",
-    "gatsby-plugin-react-helmet": "6.9.0",
-    "gatsby-plugin-sass": "6.9.0",
-    "gatsby-plugin-sharp": "5.9.0",
-    "gatsby-plugin-sitemap": "6.9.0",
-    "gatsby-plugin-slug": "2.0.0",
-    "gatsby-remark-copy-linked-files": "6.9.0",
-    "gatsby-remark-images": "7.9.0",
-    "gatsby-remark-relative-images": "2.0.2",
-    "gatsby-source-filesystem": "5.9.0",
-    "gatsby-transformer-remark": "6.9.0",
-    "gatsby-transformer-sharp": "5.9.0",
-    "lodash": "4.17.21",
-    "lodash-webpack-plugin": "0.11.6",
-    "prop-types": "15.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-helmet": "6.1.0",
-    "sass": "1.62.0",
-    "uuid": "9.0.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "clean": "gatsby clean",
-    "start": "$npm_execpath run dev",
-    "build": "$npm_execpath run clean && gatsby build",
-    "dev": "$npm_execpath run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lucide-react": "^0.487.0",
+    "next": "15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "prettier": "2.8.7"
+    "@content-collections/core": "^0.8.2",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.6",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "daisyui": "^5.0.18",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   },
-  "packageManager": "yarn@4.8.1+sha512.bc946f2a022d7a1a38adfc15b36a66a3807a67629789496c3714dd1703d2e6c6b1c69ff9ec3b43141ac7a1dd853b7685638eb0074300386a59c18df351ef8ff6"
+  "packageManager": "yarn@4.9.0+sha512.5f5f00843eae735dfab6f0442524603e987ceca55e98b36eb0120f4e58908e5b1406545321e46627dca97d15d562f23dc13fb96cabd4e6bc92d379f619001e4e"
 }
