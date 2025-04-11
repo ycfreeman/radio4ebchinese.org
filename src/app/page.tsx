@@ -1,4 +1,4 @@
-import { allHomes, allNews } from "content-collections";
+import { allPages, allNews } from "content-collections";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,23 +8,7 @@ import siteMetadata from "./site-metadata";
 import { MDXContent } from "@content-collections/mdx/react";
 
 export default function Home() {
-  const post = allHomes.at(0)!;
-  // return (
-  //   <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-  //     <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-  //       <ul>
-  //         {allGroups.map((post) => (
-  //           <li key={post._meta.path}>
-  //             <a href={`/${post._meta.path}`}>
-  //               <h3>{post.title}</h3>
-  //             </a>
-  //           </li>
-  //         ))}
-  //       </ul>
-  //     </main>
-  //     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
-  //   </div>
-  // );
+  const post = allPages.find((post) => post._meta.path === "home")!;
 
   return (
     <>
@@ -50,24 +34,6 @@ export default function Home() {
             </h2>
           </div>
         </div>
-
-        {/* <div className="absolute inset-0 bg-gradient-to-r"></div>
-          <div className="container mx-auto relative z-20 flex flex-col items-center justify-center h-[400px] text-white text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Your Sound, Your Station
-            </h1>
-            <p className="text-lg md:text-xl max-w-2xl mb-8">
-              Bringing you the best music, news, and entertainment 24/7
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn btn-lg bg-white text-rose-600 hover:bg-gray-100">
-                <Headphones className="mr-2 h-5 w-5" /> Listen Now
-              </button>
-              <button className="btn btn-lg btn-outline text-white border-white hover:bg-white/20">
-                View Schedule
-              </button>
-            </div>
-          </div> */}
       </section>
 
       <section className="container mx-auto my-8 p-4 max-w-xxl">

@@ -39,10 +39,10 @@ const groups = defineCollection({
   },
 });
 
-const home = defineCollection({
-  name: "home",
-  directory: "src/content",
-  include: ["index.md"],
+const pages = defineCollection({
+  name: "pages",
+  directory: "src/content/pages",
+  include: ["**/*.md", "**/*.mdx"],
   schema: (z) => ({
     title: z.string(),
     heading: z.string().optional(),
@@ -61,5 +61,5 @@ const home = defineCollection({
 });
 
 export default defineConfig({
-  collections: [news, groups, home],
+  collections: [news, groups, pages],
 });
