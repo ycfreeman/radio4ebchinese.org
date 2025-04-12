@@ -1,5 +1,10 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
+import remarkGfm from "remark-gfm";
+
+const mdxOptions = {
+  remarkPlugins: [remarkGfm],
+};
 
 const news = defineCollection({
   name: "news",
@@ -13,7 +18,7 @@ const news = defineCollection({
     galleryImage: z.array(z.string()).optional(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, mdxOptions);
     return {
       ...document,
       mdx,
@@ -31,7 +36,7 @@ const groups = defineCollection({
     galleryImage: z.array(z.string()).optional(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, mdxOptions);
     return {
       ...document,
       mdx,
@@ -52,7 +57,7 @@ const pages = defineCollection({
     galleryImage: z.array(z.string()).optional(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, mdxOptions);
     return {
       ...document,
       mdx,

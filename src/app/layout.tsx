@@ -100,8 +100,7 @@ export default function RootLayout({
               </span>
 
               <Link
-                href={`https://www.4eb.org.au/guide/`}
-                target="_blank"
+                href={`/programme-timetable`}
                 className="text-md font-medium hover:text-primary btn-ghost"
               >
                 時間表 | Programme Timetable
@@ -144,9 +143,11 @@ export default function RootLayout({
               <Link href="/" className="link link-hover">
                 首頁 | Home
               </Link>
-
               <Link className="link link-hover" href="/news">
                 最新動態 | News
+              </Link>
+              <Link className="link link-hover" href={`/programme-timetable`}>
+                時間表 | Programme Timetable
               </Link>
             </nav>
           </footer>
@@ -184,7 +185,7 @@ export default function RootLayout({
               </ul>
             </li>
             <li>
-              <Link href={`https://www.4eb.org.au/guide/`} target="_blank">
+              <Link href={`/programme-timetable`}>
                 時間表 | Programme Timetable
               </Link>
             </li>
