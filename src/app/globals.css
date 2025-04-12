@@ -38,3 +38,9 @@
   --noise: 0;
 }
 
+
+.prose {
+  img {
+    @apply mx-auto;
+  }
+}

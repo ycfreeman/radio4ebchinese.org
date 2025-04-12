@@ -1,7 +1,6 @@
+import NewsCard from "@/components/NewsCard";
 import { allNews, allPages } from "content-collections";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Posts() {
   const post = allPages.find((post) => post._meta.path === "news")!;
@@ -30,37 +29,10 @@ export default function Posts() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto my-8 p-4 max-w-xxl ">
+      <section className="container mx-auto my-8 p-4 max-w-xxl">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          {allNews.map((post) => (
-            <div
-              key={post._meta.path}
-              className="card lg:card-side bg-neutral-100 shadow-sm"
-            >
-              <figure>
-                <Image
-                  src={post.featuredimage ?? "/placeholder.svg"}
-                  alt="Album"
-                  width={200}
-                  height={200}
-                />
-              </figure>
-              <div className="card-body">
-                <Link href={`/news/${post._meta.path}`}>
-                  <h2 className="card-title">{post.title}</h2>
-                </Link>
-
-                <p className="lg:max-w-2xs">{post.description}</p>
-                <div className="card-actions justify-end">
-                  <Link
-                    href={`/news/${post._meta.path}`}
-                    className="btn btn-primary"
-                  >
-                    閱讀詳情 | Keep Reading <ArrowRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
+          {allNews.toReversed().map((post) => (
+            <NewsCard key={post._meta.path} {...post} />
           ))}
         </div>
       </section>

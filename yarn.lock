@@ -397,6 +397,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fancyapps/ui@npm:^5.0.36":
+  version: 5.0.36
+  resolution: "@fancyapps/ui@npm:5.0.36"
+  checksum: 10c0/7c280359d417cf6cb056f531874c9ba8a3cca78f093719e76f0ca5d0b814ebd2f3ab0c8fcd8a69043738ecc3bf04715cec183528992dce52fda2998cdb86ee41
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -1219,6 +1226,13 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: 10c0/6bf5337bc447b706bb5b4431d37686aa2ea6d07cfd6f79cc31de80170d6ff9b1c7384a9c0ccbc45b3f512bae9e9f75c2e12109806a15331dc94e8a8db6dbb4ac
+  languageName: node
+  linkType: hard
+
+"@types/luxon@npm:^3":
+  version: 3.6.2
+  resolution: "@types/luxon@npm:3.6.2"
+  checksum: 10c0/7572ee52b3d3e9dd10464b90561a728b90f34b9a257751cc3ce23762693dd1d14fa98b7f103e2efe2c6f49033331f91de5681ffd65cca88618cefe555be326db
   languageName: node
   linkType: hard
 
@@ -4062,6 +4076,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "luxon@npm:3.6.1"
+  checksum: 10c0/906d57a9dc4d1de9383f2e9223e378c298607c1b4d17b6657b836a3cd120feb1c1de3b5d06d846a3417e1ca764de8476e8c23b3cd4083b5cdb870adcb06a99d5
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^14.0.3":
   version: 14.0.3
   resolution: "make-fetch-happen@npm:14.0.3"
@@ -5210,8 +5231,10 @@ __metadata:
     "@content-collections/mdx": "npm:^0.2.2"
     "@content-collections/next": "npm:^0.2.6"
     "@eslint/eslintrc": "npm:^3"
+    "@fancyapps/ui": "npm:^5.0.36"
     "@tailwindcss/postcss": "npm:^4"
     "@tailwindcss/typography": "npm:^0.5.16"
+    "@types/luxon": "npm:^3"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
@@ -5219,6 +5242,7 @@ __metadata:
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.0"
     lucide-react: "npm:^0.487.0"
+    luxon: "npm:^3.6.1"
     next: "npm:15.3.0"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"

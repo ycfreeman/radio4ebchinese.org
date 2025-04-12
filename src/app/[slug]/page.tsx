@@ -1,6 +1,7 @@
 import { allGroups } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import NotFound from "../not-found";
+import ImageGallery from "@/components/ImageGallery";
 
 export default async function Page({
   params,
@@ -15,17 +16,14 @@ export default async function Page({
     return <NotFound />;
   }
 
-  // return (
-  //   <>
-  //     {decodeURI(slug)}
-  //     {/* {JSON.stringify(allGroups)} */}
-  //   </>
-  // );
-
   return (
-    <div className="prose">
-      <h1>{post.title}</h1>
-      <MDXContent code={post.mdx} />
-    </div>
+    <section className="container mx-auto my-8 p-4 max-w-4xl">
+      <h2 className="text-3xl font-bold mb-2">{post.title}</h2>
+      <div className="prose max-w-none lg:prose-md">
+        <MDXContent code={post.mdx} />
+      </div>
+
+      {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
+    </section>
   );
 }

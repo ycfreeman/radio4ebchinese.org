@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon-32x32.png" sizes="any" />
+      </head>
       <body
         className={`${notosans.variable} ${notoSansMono.variable} antialiased`}
       >
