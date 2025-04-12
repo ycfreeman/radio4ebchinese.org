@@ -1,10 +1,22 @@
 import HeroWithImage from "@/components/HeroWithImage";
 import NewsCard from "@/components/NewsCard";
 import { allNews, allPages } from "content-collections";
+import { Metadata, ResolvingMetadata } from "next";
+
+const post = allPages.find((post) => post._meta.path === "news")!;
+
+export async function generateMetadata(
+  _params: never,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  return {
+    title: `${post?.title} | ${parentMetadata.title?.absolute}`,
+  };
+}
 
 export default function Posts() {
-  const post = allPages.find((post) => post._meta.path === "news")!;
-
   return (
     <>
       <HeroWithImage

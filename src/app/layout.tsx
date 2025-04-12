@@ -4,7 +4,7 @@ import "./globals.css";
 
 import Link from "next/link";
 import { Play, Menu } from "lucide-react";
-import siteMetadata from "./site-metadata";
+import siteMetadata from "@/app/site-metadata";
 
 import { allGroups } from "content-collections";
 import Image from "next/image";
