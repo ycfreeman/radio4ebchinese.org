@@ -6,7 +6,7 @@ import { MDXContent } from "@content-collections/mdx/react";
 import NewsCard from "@/components/NewsCard";
 
 export default function Home() {
-  const post = allPages.find((post) => post._meta.path === "home")!;
+  const post = allPages.find((post) => post._meta.path === "index")!;
 
   return (
     <>

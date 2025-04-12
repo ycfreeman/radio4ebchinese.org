@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-noto-sans-sc);
+  --font-mono: var(--font-noto-sans-mono);
+}
+
 @plugin "daisyui" {
   themes: "pastel";
 };

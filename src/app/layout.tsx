@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
+import { Noto_Sans_SC, Noto_Sans_Mono } from "next/font/google";
 import "./globals.css";
 
 import Link from "next/link";
@@ -9,12 +9,16 @@ import siteMetadata from "./site-metadata";
 import { allGroups } from "content-collections";
 import Image from "next/image";
 
-const notosans = Noto_Sans({
-  variable: "--font-noto-sans",
+const notoSansSC = Noto_Sans_SC({
+  variable: "--font-noto-sans-sc",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const notoSansMono = Noto_Sans_Mono({
   variable: "--font-noto-sans-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,13 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${notoSansSC.variable} ${notoSansMono.variable}`}
+    >
       <head>
         <link rel="icon" href="/favicon-32x32.png" sizes="any" />
       </head>
-      <body
-        className={`${notosans.variable} ${notoSansMono.variable} antialiased`}
-      >
+      <body className={` antialiased font-sans`}>
         <div className="flex min-h-screen flex-col">
           {/* Header */}
           <header className="sticky top-0 z-40 w-full border-b bg-base-100 backdrop-blur">
