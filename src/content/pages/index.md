@@ -1,5 +1,4 @@
 ---
-templateKey: index-page
 title: 昆士蘭華語廣播協會 | Radio 4EB Chinese Group
 featuredimage: /assets/home-jumbotron.jpg
 heading: 一個熟悉的聲音，帶點感性，絕對流行

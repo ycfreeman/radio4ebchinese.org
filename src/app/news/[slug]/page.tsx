@@ -3,15 +3,30 @@ import { MDXContent } from "@content-collections/mdx/react";
 import { redirect } from "next/navigation";
 import { DateTime } from "luxon";
 import ImageGallery from "@/components/ImageGallery";
+import { Metadata, ResolvingMetadata } from "next";
 
-export default async function Page({
-  params,
-}: {
+type Props = {
   params: Promise<{ slug: string }>;
-}) {
+};
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
+  const post = allNews.find((post) => post._meta.path === decodedSlug);
 
+  const parentMetadata = await parent;
+
+  return {
+    title: `${post?.title} | ${parentMetadata.title?.absolute}`,
+  };
+}
+
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  const decodedSlug = decodeURI(slug);
   const post = allNews.find((post) => post._meta.path === decodedSlug);
 
   if (!post) {

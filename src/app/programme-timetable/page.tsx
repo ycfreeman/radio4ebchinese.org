@@ -1,9 +1,12 @@
 import HeroWithImage from "@/components/HeroWithImage";
-import NewsCard from "@/components/NewsCard";
-import { allNews, allPages } from "content-collections";
+import { MDXContent } from "@content-collections/mdx/react";
+import { allPages } from "content-collections";
+import { ArrowRight } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 
-const post = allPages.find((post) => post._meta.path === "news")!;
+const post = allPages.find(
+  (post) => post._meta.path === "programme-timetable"
+)!;
 
 export async function generateMetadata(
   _params: never,
@@ -25,11 +28,14 @@ export default function Posts() {
         subheading={post.subheading}
         featuredimage={post.featuredimage ?? "/placeholder.svg"}
       />
-      <section className="container mx-auto my-8 p-4 max-w-xxl">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          {allNews.toReversed().map((post) => (
-            <NewsCard key={post._meta.path} {...post} />
-          ))}
+      <section className="container mx-auto my-8 p-4 max-w-4xl">
+        <div className="prose max-w-none lg:prose-md">
+          <MDXContent
+            code={post.mdx}
+            components={{
+              ArrowRight,
+            }}
+          />
         </div>
       </section>
     </>
