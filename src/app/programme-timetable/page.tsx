@@ -26,7 +26,7 @@ export default function Posts() {
         alt={post.title}
         heading={post.heading}
         subheading={post.subheading}
-        featuredimage={post.featuredimage ?? "/placeholder.svg"}
+        featuredimage={post.featuredImage ?? "/placeholder.svg"}
       />
       <section className="container mx-auto my-8 p-4 max-w-4xl">
         <div className="prose max-w-none lg:prose-md">

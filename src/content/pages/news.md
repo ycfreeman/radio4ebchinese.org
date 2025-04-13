@@ -1,6 +1,6 @@
 ---
 title: 最新動態 | News
-featuredimage: /assets/blog-index.jpg
+featuredImage: /assets/blog-index.jpg
 heading: 最新動態 | News
 slug: news
 ---

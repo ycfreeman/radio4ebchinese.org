@@ -14,7 +14,7 @@ const news = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     date: z.coerce.date(),
-    featuredimage: z.string().optional(),
+    featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
     slug: z.string(),
   }),
@@ -34,6 +34,7 @@ const groups = defineCollection({
   schema: (z) => ({
     title: z.string(),
     description: z.string().optional(),
+    featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
     slug: z.string(),
   }),
@@ -55,7 +56,7 @@ const pages = defineCollection({
     heading: z.string().optional(),
     subheading: z.string().optional(),
     description: z.string().optional(),
-    featuredimage: z.string().optional(),
+    featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
   }),
   transform: async (document, context) => {

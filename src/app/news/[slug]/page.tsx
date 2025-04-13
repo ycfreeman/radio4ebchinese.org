@@ -42,8 +42,9 @@ export default async function Page({ params }: Props) {
       <div className="prose max-w-none lg:prose-md">
         <MDXContent code={post.mdx} />
       </div>
-
-      {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
+      <div className="my-4">
+        {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
+      </div>
     </section>
   );
 }

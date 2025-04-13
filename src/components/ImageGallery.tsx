@@ -10,7 +10,7 @@ const ImageGallery = ({ images }: { images: string[] }) => {
         },
       }}
     >
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {images.map((image, i) => (
           <a
             className="block aspect-square shadow-sm overflow-hidden rounded-lg"

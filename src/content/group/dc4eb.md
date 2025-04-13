@@ -1,6 +1,6 @@
 ---
-templateKey: group
 title: 榴槤俱樂部
+featuredImage: /assets/durianclub_0.png
 galleryImage:
   - /assets/durianclub_0.png
   - /assets/durianclub_1.jpg

@@ -3,6 +3,7 @@ import { MDXContent } from "@content-collections/mdx/react";
 import NotFound from "../not-found";
 import ImageGallery from "@/components/ImageGallery";
 import { Metadata, ResolvingMetadata } from "next";
+import HeroWithImage from "@/components/HeroWithImage";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -37,13 +38,26 @@ export default async function Page({
   }
 
   return (
-    <section className="container mx-auto my-8 p-4 max-w-4xl">
-      <h2 className="text-3xl font-bold mb-2">{post.title}</h2>
-      <div className="prose max-w-none lg:prose-md">
-        <MDXContent code={post.mdx} />
-      </div>
+    <>
+      {post.featuredImage && (
+        <HeroWithImage
+          alt={post.title}
+          heading={post.title}
+          featuredimage={post.featuredImage ?? "/placeholder.svg"}
+        />
+      )}
 
-      {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
-    </section>
+      <section className="container mx-auto my-8 p-4 max-w-4xl">
+        <h2 className="text-3xl font-bold mb-4">{post.title}</h2>
+        <div className="prose max-w-none lg:prose-md">
+          <MDXContent code={post.mdx} />
+        </div>
+        <div className="my-4">
+          {post.galleryImage ? (
+            <ImageGallery images={post.galleryImage} />
+          ) : null}
+        </div>
+      </section>
+    </>
   );
 }

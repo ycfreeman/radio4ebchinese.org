@@ -11,7 +11,7 @@ const NewsCard = (post: News) => {
     <div className="card lg:card-side bg-neutral-100 shadow-sm">
       <figure>
         <Image
-          src={post.featuredimage ?? "/placeholder.svg"}
+          src={post.featuredImage ?? "/placeholder.svg"}
           alt="Album"
           width={200}
           height={200}
