@@ -87,11 +87,8 @@ export default function RootLayout({
                   className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
                 >
                   {allGroups.map((post) => (
-                    <li key={post._meta.path}>
-                      <Link
-                        href={`/${post._meta.path}`}
-                        className="link link-hover"
-                      >
+                    <li key={post.slug}>
+                      <Link href={`/${post.slug}`} className="link link-hover">
                         {post.title}
                       </Link>
                     </li>
@@ -130,8 +127,8 @@ export default function RootLayout({
               <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-6  gap-x-6 gap-y-2">
                 {allGroups.map((post) => (
                   <Link
-                    key={post._meta.path}
-                    href={`/${post._meta.path}`}
+                    key={post.slug}
+                    href={`/${post.slug}`}
                     className="link link-hover"
                   >
                     {post.title}
@@ -143,10 +140,10 @@ export default function RootLayout({
               <Link href="/" className="link link-hover">
                 首頁 | Home
               </Link>
-              <Link className="link link-hover" href="/news">
+              <Link href="/news" className="link link-hover">
                 最新動態 | News
               </Link>
-              <Link className="link link-hover" href={`/programme-timetable`}>
+              <Link href={`/programme-timetable`} className="link link-hover">
                 時間表 | Programme Timetable
               </Link>
             </nav>
@@ -173,11 +170,8 @@ export default function RootLayout({
 
               <ul>
                 {allGroups.map((post) => (
-                  <li key={post._meta.path}>
-                    <Link
-                      href={`/${post._meta.path}`}
-                      className="link link-hover"
-                    >
+                  <li key={post.slug}>
+                    <Link href={`/${post.slug}`} className="link link-hover">
                       {post.title}
                     </Link>
                   </li>

@@ -7,8 +7,9 @@ featuredpost: false
 featuredimage: /assets/happytryio-2.jpg
 galleryImage:
   - /assets/happytryio-2.jpg
+slug: 2015-10-28-chinese-new-year
 ---
+
 Chinese New Year (Fortitude Valley)
 
 OB Van
-

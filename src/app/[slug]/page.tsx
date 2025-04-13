@@ -14,7 +14,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
-  const post = allGroups.find((post) => post._meta.path === decodedSlug);
+  const post = allGroups.find((post) => post.slug === decodedSlug);
 
   const parentMetadata = await parent;
   return {
@@ -30,7 +30,7 @@ export default async function Page({
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
 
-  const post = allGroups.find((post) => post._meta.path === decodedSlug);
+  const post = allGroups.find((post) => post.slug === decodedSlug);
 
   if (!post) {
     return <NotFound />;

@@ -1,5 +1,4 @@
 ---
-templateKey: group
 title: 咖啡狂想曲
 galleryImage:
   - /assets/coffee-_rhapsody_1.jpg

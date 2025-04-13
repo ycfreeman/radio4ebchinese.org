@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...[
       ...allGroups.map((post) => ({
-        url: `https://www.radio4ebchinese.org/${post._meta.path}`,
+        url: `https://www.radio4ebchinese.org/${post.slug}`,
         lastModified: new Date(),
       })),
     ],
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...[
       ...allNews.map((post) => ({
-        url: `https://www.radio4ebchinese.org/news/${post._meta.path}`,
+        url: `https://www.radio4ebchinese.org/news/${post.slug}`,
         lastModified: new Date(post.date),
       })),
     ],

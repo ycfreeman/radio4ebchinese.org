@@ -16,6 +16,7 @@ const news = defineCollection({
     date: z.coerce.date(),
     featuredimage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
+    slug: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, mdxOptions);
@@ -34,6 +35,7 @@ const groups = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
+    slug: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, mdxOptions);

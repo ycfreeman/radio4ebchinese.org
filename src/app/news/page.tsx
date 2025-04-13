@@ -28,7 +28,7 @@ export default function Posts() {
       <section className="container mx-auto my-8 p-4 max-w-xxl">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {allNews.toReversed().map((post) => (
-            <NewsCard key={post._meta.path} {...post} />
+            <NewsCard key={post.slug} {...post} />
           ))}
         </div>
       </section>

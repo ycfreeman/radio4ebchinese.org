@@ -15,7 +15,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
-  const post = allNews.find((post) => post._meta.path === decodedSlug);
+  const post = allNews.find((post) => post.slug === decodedSlug);
 
   const parentMetadata = await parent;
 
@@ -27,7 +27,7 @@ export async function generateMetadata(
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
-  const post = allNews.find((post) => post._meta.path === decodedSlug);
+  const post = allNews.find((post) => post.slug === decodedSlug);
 
   if (!post) {
     return redirect("/not-found");
