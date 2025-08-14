@@ -9,12 +9,12 @@ const NewsCard = (post: News) => {
 
   return (
     <div className="card lg:card-side bg-neutral-100 shadow-sm">
-      <figure>
+      <figure className="lg:min-w-[55%] sm:min-w-[30%]">
         <Image
           src={post.featuredImage ?? "/placeholder.svg"}
           alt="Album"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
         />
       </figure>
       <div className="card-body">
