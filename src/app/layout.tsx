@@ -108,6 +108,7 @@ export default function RootLayout({
               <Link
                 href="https://www.4eb.org.au/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hidden md:flex btn btn-primary btn-sm gap-2 rounded-field"
               >
                 <Play className="h-4 w-4" /> Listen Live on 4EB
@@ -187,6 +188,7 @@ export default function RootLayout({
               <Link
                 href="https://www.4eb.org.au/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex btn btn-primary btn-sm gap-2 rounded-field"
               >
                 <Play className="h-4 w-4" /> Listen Live on 4EB
