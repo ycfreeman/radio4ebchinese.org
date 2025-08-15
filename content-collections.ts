@@ -1,7 +1,7 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
 import remarkGfm from "remark-gfm";
-import { z } from "zod/v4";
+import { z } from "zod";
 
 const mdxOptions = {
   remarkPlugins: [remarkGfm],
