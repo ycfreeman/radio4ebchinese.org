@@ -26,7 +26,7 @@ const NewsCard = (post: News) => {
         </p>
         <p className="lg:max-w-2xs">{post.description}</p>
         <div className="card-actions justify-end">
-          <Link href={postUrl} className="btn btn-primary">
+          <Link href={postUrl} className="btn btn-primary rounded-field">
             閱讀詳情 | Keep Reading <ArrowRight />
           </Link>
         </div>

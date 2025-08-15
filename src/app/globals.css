@@ -7,7 +7,7 @@
 }
 
 @plugin "daisyui" {
-  themes: "pastel";
+  themes: pastel;
 };
 @plugin "daisyui/theme" {
   name: "pastel";
@@ -34,13 +34,21 @@
   --color-warning-content: oklch(55% 0.195 38.402);
   --color-error: oklch(80% 0.114 19.571);
   --color-error-content: oklch(50% 0.213 27.518);
+
+  /* border radius */
   --radius-selector: 1rem;
   --radius-field: 2rem;
   --radius-box: 1rem;
+
+  /* base sizes */
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
-  --border: 2px;
-  --depth: 0;
+
+  /* border size */
+  --border: 1px;
+
+  /* effects */
+  --depth: 1;
   --noise: 0;
 }
 
