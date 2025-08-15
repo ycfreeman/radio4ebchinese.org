@@ -60,7 +60,7 @@ export default function RootLayout({
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer"
-                className="btn btn-ghost md:hidden drawer-button"
+                className="btn btn-ghost md:hidden drawer-button rounded-field"
               >
                 <Menu />
               </label>
@@ -108,7 +108,7 @@ export default function RootLayout({
               <Link
                 href="https://www.4eb.org.au/"
                 target="_blank"
-                className="hidden md:flex btn btn-primary btn-sm gap-2"
+                className="hidden md:flex btn btn-primary btn-sm gap-2 rounded-field"
               >
                 <Play className="h-4 w-4" /> Listen Live on 4EB
               </Link>
@@ -187,7 +187,7 @@ export default function RootLayout({
               <Link
                 href="https://www.4eb.org.au/"
                 target="_blank"
-                className="flex btn btn-primary btn-sm gap-2"
+                className="flex btn btn-primary btn-sm gap-2 rounded-field"
               >
                 <Play className="h-4 w-4" /> Listen Live on 4EB
               </Link>
