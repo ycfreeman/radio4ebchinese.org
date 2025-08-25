@@ -30,7 +30,7 @@
     "@types/react-dom": "^19.1.7",
     "daisyui": "^5.0.50",
     "eslint": "^9.33.0",
-    "eslint-config-next": "15.4.6",
+    "eslint-config-next": "15.5.0",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
