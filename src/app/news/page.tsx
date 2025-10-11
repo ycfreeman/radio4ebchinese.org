@@ -9,6 +9,12 @@ type Props = {
   params: Promise<never>;
 };
 
+/**
+ * Build the page metadata title by combining the news post title with the parent's absolute title.
+ *
+ * @param parent - Resolver for the parent route's metadata used to derive the parent's absolute title
+ * @returns A `Metadata` object with `title` set to "`{post.title} | {parent absolute title}`"
+ */
 export async function generateMetadata(
   { params: _params }: Props,
   parent: ResolvingMetadata
