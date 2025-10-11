@@ -5,8 +5,12 @@ import { Metadata, ResolvingMetadata } from "next";
 
 const post = allPages.find((post) => post._meta.path === "news")!;
 
+type Props = {
+  params: Promise<never>;
+};
+
 export async function generateMetadata(
-  _params: unknown,
+  { params: _params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentMetadata = await parent;
