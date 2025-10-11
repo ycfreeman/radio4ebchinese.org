@@ -9,7 +9,7 @@ const post = allPages.find(
 )!;
 
 export async function generateMetadata(
-  _params: never,
+  _params: unknown,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentMetadata = await parent;
