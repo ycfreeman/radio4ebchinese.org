@@ -1,0 +1,9 @@
+reviews:
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
+  poem: false
+language: en-AU
+tone_instructions: Be concise and focus on critical issues only

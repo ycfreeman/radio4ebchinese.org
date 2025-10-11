@@ -8,8 +8,12 @@ const post = allPages.find(
   (post) => post._meta.path === "programme-timetable"
 )!;
 
+type Props = {
+  params: Promise<never>;
+};
+
 export async function generateMetadata(
-  _params: never,
+  { params: _params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentMetadata = await parent;
