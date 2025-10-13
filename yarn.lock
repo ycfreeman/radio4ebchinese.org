@@ -2160,10 +2160,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "daisyui@npm:5.2.0"
-  checksum: 10c0/ec015dbbca0558405061306c214a83917836e607988c42a2e506ef52b1c474bf4cddb4168710363604ca735a17591e1da674467afa83cd8d589d33e7b2c9d31c
+"daisyui@npm:^5.2.3":
+  version: 5.2.3
+  resolution: "daisyui@npm:5.2.3"
+  checksum: 10c0/b50e58a93ceea4ce56a067f5f606acb823ed2637aa5222ad18699c3e703404e0a8441341c5ef1794ece47e04f7aa0324be34386e813374179e44a5630d2336f2
   languageName: node
   linkType: hard
 
@@ -5295,7 +5295,7 @@ __metadata:
     "@types/node": "npm:^24.7.1"
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.1"
-    daisyui: "npm:^5.2.0"
+    daisyui: "npm:^5.2.3"
     eslint: "npm:^9.37.0"
     eslint-config-next: "npm:16.0.0-beta.0"
     lucide-react: "npm:^0.545.0"
