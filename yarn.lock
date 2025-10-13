@@ -997,12 +997,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.0.0-beta.0":
-  version: 16.0.0-beta.0
-  resolution: "@next/eslint-plugin-next@npm:16.0.0-beta.0"
+"@next/eslint-plugin-next@npm:16.0.0-canary.3":
+  version: 16.0.0-canary.3
+  resolution: "@next/eslint-plugin-next@npm:16.0.0-canary.3"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/43deec2c709115324c740af9659de6ab24e57e6c3e9fa1d567dbfdcb5c9a6697530557c995d2e5c2f76c57d6cc97ba79ad6f13cee71205dc68444807e0f6de3a
+  checksum: 10c0/5c9b7e882ac55fa24041ed1175493c5003f02a7f242fc4852a7118726f6c0a83c83658ce9859d542bf67b0df51ee5533d990e17587e6a72219284535421d3cd8
   languageName: node
   linkType: hard
 
@@ -2628,11 +2628,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:16.0.0-beta.0":
-  version: 16.0.0-beta.0
-  resolution: "eslint-config-next@npm:16.0.0-beta.0"
+"eslint-config-next@npm:16.0.0-canary.3":
+  version: 16.0.0-canary.3
+  resolution: "eslint-config-next@npm:16.0.0-canary.3"
   dependencies:
-    "@next/eslint-plugin-next": "npm:16.0.0-beta.0"
+    "@next/eslint-plugin-next": "npm:16.0.0-canary.3"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -2648,7 +2648,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/d96531671250db79c61ce74f94aab6b052baafcb89d008c74d5883a0da4a8ce28996692c671a62d2f5ae463f378672e3ace95a97d95302240b8eb7949bc625f7
+  checksum: 10c0/4ed748d534d5c18e427f4309eae8617a6f32b393c436a81a8bfbd61f21f0aece9378cc68f594b4433fa9e0289fc84aaa66ebf83c2df17a246b1147dd3abb0457
   languageName: node
   linkType: hard
 
@@ -5297,7 +5297,7 @@ __metadata:
     "@types/react-dom": "npm:19.2.1"
     daisyui: "npm:^5.2.0"
     eslint: "npm:^9.37.0"
-    eslint-config-next: "npm:16.0.0-beta.0"
+    eslint-config-next: "npm:16.0.0-canary.3"
     lucide-react: "npm:^0.545.0"
     luxon: "npm:^3.7.2"
     next: "npm:16.0.0-beta.0"
