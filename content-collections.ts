@@ -1,10 +1,17 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
-import { compileMDX } from "@content-collections/mdx";
+import { compileMDX, Options as MDXOptions } from "@content-collections/mdx";
 import remarkGfm from "remark-gfm";
 import { z } from "zod";
+import rehypeExternalLinks from "rehype-external-links";
 
-const mdxOptions = {
+const mdxOptions: MDXOptions = {
   remarkPlugins: [remarkGfm],
+  rehypePlugins: [
+    [
+      rehypeExternalLinks,
+      { target: "_blank", rel: ["noopener", "noreferrer"] },
+    ],
+  ],
 };
 
 const news = defineCollection({
