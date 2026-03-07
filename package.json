@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "oxlint ."
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.13",
@@ -21,7 +21,6 @@
     "@content-collections/core": "^0.14.2",
     "@content-collections/mdx": "^0.2.2",
     "@content-collections/next": "^0.2.11",
-    "@eslint/eslintrc": "^3.3.5",
     "@tailwindcss/postcss": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/luxon": "^3.7.1",
@@ -29,8 +28,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "daisyui": "^5.5.19",
-    "eslint": "^10.0.3",
-    "eslint-config-next": "16.1.6",
+    "oxlint": "^1.51.0",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
