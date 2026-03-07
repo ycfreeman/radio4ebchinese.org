@@ -29,6 +29,7 @@
     "@types/react-dom": "19.2.3",
     "daisyui": "^5.5.19",
     "oxlint": "^1.51.0",
+    "rehype-external-links": "^3.0.0",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
