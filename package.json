@@ -9,35 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fancyapps/ui": "^6.1.6",
-    "lucide-react": "^0.555.0",
+    "@fancyapps/ui": "^6.1.13",
+    "lucide-react": "^0.577.0",
     "luxon": "^3.7.2",
     "next": "16.1.6",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "zod": "^4.1.12"
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@content-collections/core": "^0.14.2",
     "@content-collections/mdx": "^0.2.2",
     "@content-collections/next": "^0.2.11",
-    "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.14",
+    "@eslint/eslintrc": "^3.3.5",
+    "@tailwindcss/postcss": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/luxon": "^3.7.1",
-    "@types/node": "^24.7.1",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1",
-    "daisyui": "^5.2.0",
-    "eslint": "^9.37.0",
+    "@types/node": "^25.3.5",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "daisyui": "^5.5.19",
+    "eslint": "^10.0.3",
     "eslint-config-next": "16.1.6",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.14",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   },
   "packageManager": "npm@11.11.0+sha512.f36811c4aae1fde639527368ae44c571d050006a608d67a191f195a801a52637a312d259186254aa3a3799b05335b7390539cf28656d18f0591a1125ba35f973",
   "resolutions": {
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1"
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
   }
 }
