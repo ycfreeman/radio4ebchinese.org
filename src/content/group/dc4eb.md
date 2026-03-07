@@ -12,14 +12,41 @@ galleryImage:
 slug: dc4eb
 ---
 
-### Durian Club / Digital Chat
+### 榴槤俱樂部 - 跨越挑戰，迎向未來
 
-榴槤俱樂部屬於廣東話青年組，由一班年青的主持人為大家主持節目。我們榴槤俱樂部的節目涵蓋各種社區資訊，例如：Brisbane 有乜搞 ── 告訴你接下來的一周 Brisbane 有什麼活動可以參加或者湊個熱鬧；榴槤 news room── 讓你得知港澳兩地新聞及世界時事；當然亦少不了娛樂新聞、最新影視資訊, 或者專輯推介等等，我們每星期還會為你介紹各種有趣又實用的手機 APP。而每當有香港藝人來到 Brisbane，我們都會派員採訪，曾受訪嘉賓有 MC Jin, DJ Miss Yellow (黃泆潼), 新晉模特兒向殷和澳洲旅遊局絕世筍工計劃最後三強，現為香港 TVBJ2 台旅遊主持梁彥宗等等，總之節目豐富。每逢星期六晚，十點半至十二點，在收音機打開 FM 98.1，或者上網都可以收聽到我們的節目。
+「榴槤俱樂部」不斷轉變和成長。無論節目時間、主持人陣容，還是形式與主題，都因應聽眾需要而調整，希望與時並進，帶來更多驚喜。
 
-精彩的節目又怎會只得一個呢？除了以上所講的榴槤俱樂部之外，我們在 2013 年底還開拓到數碼頻道 ── 榴槤數碼講。數碼講的講字，就是意味著我們會講很多有意思的東西給你們聽！在數碼講裡面，節目更為多元化，除了固有環節，我們致力推出不同的新元素。皇牌節目係咪你杯茶，每兩個星期都會上演一場愛情辯論大賽或分享，每次主題都不一樣，男女雙方各持己見，誓要以唇槍舌劍打倒對方！另一個希望大家留意的是廣播劇，製作組不斷尋找或創作各種劇本，以籌備廣播劇。如果想收聽我們榴槤數碼講，同樣是每逢星期六的晚上，但是時間就較為早一些，在晚上七點半至九點，可以在 4EB 網上的 Global Digital Channel 收聽。
+疫情期間，主持人無法親身到電台或與嘉賓見面，但憑藉科技的幫助，我們透過 Zoom 及家居錄音繼續製作節目，甚至成功跨越地域，訪問到香港的知名藝人，例如「金像導演」陳慶嘉、「視后」江美儀、「三料女歌手金獎」Gin Lee 李幸倪、「四料新人王」魏浚笙 Jeffrey 等，讓布里斯本的聽眾與海外娛樂文化緊密連繫。
 
-如果想更了解我們，可以到我們榴槤俱樂部 Durian Club 的 Facebook Page 瀏覽更多的資訊，或者 Inbox 留言給我們。榴槤俱樂部的 Facebook Page 是[www.instagram.com/4ebdurianclub/](https://www.instagram.com/4ebdurianclub/)！
+經改革後，每逢星期六晚，節目內容更趨多元化：
 
-**_Details of website_**
+《榴槤俱樂部》（FM98.1，8–9pm）：人物專訪及實用資訊。
 
-[www.instagram.com/4ebdurianclub/](https://www.instagram.com/4ebdurianclub/)
+《榴槤數碼講》（Global Digital，9–11pm）：時事、潮流、旅遊、美食及影視推介。
+
+《榴槤音樂廳》（FM98.1，11pm–1am）：與布里斯本及香港音樂人交流，送上動人中文歌曲。
+
+由於主持人全屬義工性質，有人因工作或家庭暫別，但近年隨着不少香港朋友移居布里斯本，我們迎來一批新主持，為節目注入新活力。未來，我們將繼續推陳出新，保持緊貼時代，為聽眾帶來最新、最準確的資訊。同時亦誠邀熱愛廣播的朋友加入，一齊開 Mic、一齊分享，與我們共度每個充滿笑聲的星期六晚上。
+
+### Durian Club – Overcoming Challenges, Embracing the Future
+
+Since the 40th anniversary, Durian Club has continued to grow and transform. From program times and hosting teams to formats and themes, we have made changes to meet the needs of our listeners, keeping the program fresh and full of surprises.
+
+The COVID pandemic brought many challenges, as hosts could not attend the studio or meet guests face to face. Thanks to technology, we continued broadcasting through Zoom and home recordings, and even reached across borders to interview Hong Kong.  These interviews gave Brisbane audiences a closer connection to overseas entertainment and culture.
+
+Today, our Saturday night line-up is more diverse than ever:
+
+Durian Club (FM98.1, 8 - 9pm): In-depth interviews and practical information.
+
+Durian Digital Talk (Global Digital, 9 - 11pm): Current affairs, What’s on Brisbane, lifestyle trends, travel, food, and film recommendations.
+
+Durian Music Hall (FM98.1, 11pm - 1am): Chinese pop music and exchanges with Brisbane and Hong Kong musicians.
+
+All our hosts are volunteers, and while some may step back due to work or family, we have also welcomed new friends - especially many who have recently moved from Hong Kong to Brisbane. Their energy and passion have brought new vitality to the program.
+Looking ahead, Durian Club will continue to innovate and stay in tune with the times, bringing listeners the latest information and entertainment. Most importantly, we remain committed to being a platform for sharing stories, music, and laughter.
+
+We also warmly invite those who love broadcasting to join us, share your ideas, and spend a lively Saturday night with the Durian Club family.
+
+- Instagram  [https://www.instagram.com/4ebdurianclub/](https://www.instagram.com/4ebdurianclub/)		
+- Facebook [https://www.facebook.com/Durianclub4eb](https://www.facebook.com/Durianclub4eb) 			
+- Youtube  [https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8](https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8)

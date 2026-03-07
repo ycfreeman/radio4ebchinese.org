@@ -18,6 +18,7 @@ const news = defineCollection({
     featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
     slug: z.string(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, mdxOptions);
@@ -44,6 +45,7 @@ const groups = defineCollection({
     featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
     slug: z.string(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, mdxOptions);
@@ -71,6 +73,7 @@ const pages = defineCollection({
     description: z.string().optional(),
     featuredImage: z.string().optional(),
     galleryImage: z.array(z.string()).optional(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, mdxOptions);
@@ -88,5 +91,5 @@ const pages = defineCollection({
 });
 
 export default defineConfig({
-  collections: [news, groups, pages],
+  content: [news, groups, pages],
 });
