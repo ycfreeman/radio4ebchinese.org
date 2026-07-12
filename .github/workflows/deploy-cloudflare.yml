@@ -40,7 +40,7 @@ jobs:
         run: pnpm lint
 
       - name: Check formatting
-        run: pnpm format:check
+        run: pnpm fmt:check
 
       - name: Build and deploy
         run: pnpm cf:deploy
