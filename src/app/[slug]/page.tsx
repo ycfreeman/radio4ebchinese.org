@@ -1,13 +1,19 @@
 import { allGroups } from "content-collections";
-import NotFound from "../not-found";
 import ImageGallery from "@/components/ImageGallery";
 import { Metadata, ResolvingMetadata } from "next";
 import HeroWithImage from "@/components/HeroWithImage";
 import ContentRenderer from "@/components/ContentRenderer";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return allGroups.map(({ slug }) => ({ slug }));
+}
 
 export async function generateMetadata(
   { params }: Props,
@@ -34,7 +40,7 @@ export default async function Page({
   const post = allGroups.find((post) => post.slug === decodedSlug);
 
   if (!post) {
-    return <NotFound />;
+    notFound();
   }
 
   return (

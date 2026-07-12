@@ -1,5 +1,5 @@
 import { allNews } from "content-collections";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { DateTime } from "luxon";
 import ImageGallery from "@/components/ImageGallery";
 import { Metadata, ResolvingMetadata } from "next";
@@ -8,6 +8,12 @@ import ContentRenderer from "@/components/ContentRenderer";
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return allNews.map(({ slug }) => ({ slug }));
+}
 
 export async function generateMetadata(
   { params }: Props,
@@ -30,7 +36,7 @@ export default async function Page({ params }: Props) {
   const post = allNews.find((post) => post.slug === decodedSlug);
 
   if (!post) {
-    return redirect("/not-found");
+    notFound();
   }
 
   return (

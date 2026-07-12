@@ -19,9 +19,9 @@ basically a bunch of `.md`/`.mdx` files in different folders
 
 ## Deployment
 
-The site is built for Cloudflare Workers with
-[`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare/) and deployed
-with Wrangler.
+The site is exported as static HTML and deployed to Cloudflare Static Assets
+with Wrangler. There is no user Worker entrypoint, so requests are served
+directly from the exported `out/` directory.
 
 ### Local Cloudflare preview
 
@@ -29,8 +29,8 @@ with Wrangler.
 pnpm cf:preview
 ```
 
-This builds the Next.js app, converts it to a Cloudflare Worker, and starts a
-local Workers runtime.
+This exports the Next.js app and starts a local Cloudflare static-assets
+preview.
 
 ### Manual deployment
 
@@ -41,9 +41,8 @@ pnpm cf:deploy
 ```
 
 The first deployment uses the generated `workers.dev` URL. Verify that URL
-before attaching `www.radio4ebchinese.org` as a Cloudflare Worker Custom
-Domain. Keep the apex-domain redirect to `https://www.radio4ebchinese.org`
-when moving DNS from Vercel.
+before attaching `www.radio4ebchinese.org` as a Cloudflare Custom Domain. Keep
+the apex-domain redirect to `https://www.radio4ebchinese.org` when moving DNS.
 
 ### GitHub Actions deployment
 
