@@ -1,18 +1,5 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
-import { compileMDX, Options as MDXOptions } from "@content-collections/mdx";
-import remarkGfm from "remark-gfm";
 import { z } from "zod";
-import rehypeExternalLinks from "rehype-external-links";
-
-const mdxOptions: MDXOptions = {
-  remarkPlugins: [remarkGfm],
-  rehypePlugins: [
-    [
-      rehypeExternalLinks,
-      { target: "_blank", rel: ["noopener", "noreferrer"] },
-    ],
-  ],
-};
 
 const news = defineCollection({
   name: "news",
@@ -27,19 +14,6 @@ const news = defineCollection({
     slug: z.string(),
     content: z.string(),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDX(context, document, mdxOptions);
-    return {
-      ...document,
-      mdx,
-      _raw: {
-        sourceFilePath: document._meta.filePath,
-        sourceFileName: document._meta.fileName,
-        sourceFileDir: document._meta.directory,
-        flattenedPath: document._meta.path,
-      },
-    };
-  },
 });
 
 const groups = defineCollection({
@@ -54,19 +28,6 @@ const groups = defineCollection({
     slug: z.string(),
     content: z.string(),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDX(context, document, mdxOptions);
-    return {
-      ...document,
-      mdx,
-      _raw: {
-        sourceFilePath: document._meta.filePath,
-        sourceFileName: document._meta.fileName,
-        sourceFileDir: document._meta.directory,
-        flattenedPath: document._meta.path,
-      },
-    };
-  },
 });
 
 const pages = defineCollection({
@@ -82,19 +43,6 @@ const pages = defineCollection({
     galleryImage: z.array(z.string()).optional(),
     content: z.string(),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDX(context, document, mdxOptions);
-    return {
-      ...document,
-      mdx,
-      _raw: {
-        sourceFilePath: document._meta.filePath,
-        sourceFileName: document._meta.fileName,
-        sourceFileDir: document._meta.directory,
-        flattenedPath: document._meta.path,
-      },
-    };
-  },
 });
 
 export default defineConfig({

@@ -1,9 +1,9 @@
 import { allNews } from "content-collections";
-import { MDXContent } from "@content-collections/mdx/react";
 import { redirect } from "next/navigation";
 import { DateTime } from "luxon";
 import ImageGallery from "@/components/ImageGallery";
 import { Metadata, ResolvingMetadata } from "next";
+import ContentRenderer from "@/components/ContentRenderer";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -40,7 +40,7 @@ export default async function Page({ params }: Props) {
         {DateTime.fromJSDate(post.date).toFormat("LLLL dd, yyyy")}
       </p>
       <div className="prose max-w-none lg:prose-md">
-        <MDXContent code={post.mdx} />
+        <ContentRenderer content={post.content} />
       </div>
       <div className="my-4">
         {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
