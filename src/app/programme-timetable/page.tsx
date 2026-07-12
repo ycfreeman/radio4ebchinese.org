@@ -4,9 +4,7 @@ import { allPages } from "content-collections";
 import { ArrowRight } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 
-const post = allPages.find(
-  (post) => post._meta.path === "programme-timetable"
-)!;
+const post = allPages.find((post) => post._meta.path === "programme-timetable")!;
 
 type Props = {
   params: Promise<never>;
@@ -14,7 +12,7 @@ type Props = {
 
 export async function generateMetadata(
   { params: _params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 

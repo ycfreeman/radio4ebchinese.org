@@ -32,10 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${notoSansSC.variable} ${notoSansMono.variable}`}
-    >
+    <html lang="en" className={`${notoSansSC.variable} ${notoSansMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon-32x32.png" sizes="any" />
       </head>
@@ -44,10 +41,7 @@ export default function RootLayout({
           {/* Header */}
           <header className="navbar w-full shadow-sm">
             <div className="flex items-center gap-2 flex-1 md:flex-none">
-              <Link
-                href={`/`}
-                className="text-md font-medium hover:text-primary"
-              >
+              <Link href={`/`} className="text-md font-medium hover:text-primary">
                 <Image
                   className="p-2"
                   src="/assets/logo.png"
@@ -67,19 +61,12 @@ export default function RootLayout({
             </div>
 
             <nav className="hidden md:flex gap-6 flex-1 justify-center">
-              <Link
-                href={`/news`}
-                className="text-md font-medium hover:text-primary btn-ghost"
-              >
+              <Link href={`/news`} className="text-md font-medium hover:text-primary btn-ghost">
                 最新動態 | News
               </Link>
 
               <span className="dropdown dropdown-hover">
-                <span
-                  tabIndex={0}
-                  role="button"
-                  className="btn-ghost text-md font-medium m-1"
-                >
+                <span tabIndex={0} role="button" className="btn-ghost text-md font-medium m-1">
                   節目組 | Groups
                 </span>
                 <ul
@@ -127,11 +114,7 @@ export default function RootLayout({
               <h6 className="footer-title">節目組 | Groups</h6>
               <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-6  gap-x-6 gap-y-2">
                 {allGroups.map((post) => (
-                  <Link
-                    key={post.slug}
-                    href={`/${post.slug}`}
-                    className="link link-hover"
-                  >
+                  <Link key={post.slug} href={`/${post.slug}`} className="link link-hover">
                     {post.title}
                   </Link>
                 ))}
@@ -155,11 +138,7 @@ export default function RootLayout({
 
         {/* Sidebar */}
         <div className="drawer-side">
-          <label
-            htmlFor="my-drawer"
-            aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
+          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
 
           <ul className="menu bg-base-200 min-h-full w-80 p-4">
             {/* Sidebar content here */}
@@ -180,9 +159,7 @@ export default function RootLayout({
               </ul>
             </li>
             <li>
-              <Link href={`/programme-timetable`}>
-                時間表 | Programme Timetable
-              </Link>
+              <Link href={`/programme-timetable`}>時間表 | Programme Timetable</Link>
             </li>
             <li className="mt-4">
               <Link

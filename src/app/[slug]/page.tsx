@@ -17,7 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
@@ -29,11 +29,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
 
@@ -59,9 +55,7 @@ export default async function Page({
           <ContentRenderer content={post.content} />
         </div>
         <div className="my-4">
-          {post.galleryImage ? (
-            <ImageGallery images={post.galleryImage} />
-          ) : null}
+          {post.galleryImage ? <ImageGallery images={post.galleryImage} /> : null}
         </div>
       </section>
     </>

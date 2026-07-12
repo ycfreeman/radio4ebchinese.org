@@ -1,13 +1,18 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
-import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import { Fancybox as NativeFancybox, type FancyboxOptions } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function Fancybox(props: any) {
-  const containerRef = useRef(null);
+interface FancyboxProps {
+  children: ReactNode;
+  delegate?: string;
+  options?: Partial<FancyboxOptions>;
+}
+
+function Fancybox(props: FancyboxProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;

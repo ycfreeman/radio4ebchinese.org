@@ -1,7 +1,7 @@
 ---
 title: Radio 4EB FM 98.1中文組暨 4EB 昆士蘭華語廣播協會45週年晚宴 第一屆中文流行歌唱大賽決賽
 date: 2025-11-15T11:30:00.000+10:00
-featuredImage:  /assets/2026/03/queensland-chinese-times.jpeg
+featuredImage: /assets/2026/03/queensland-chinese-times.jpeg
 galleryImage:
   - /assets/2026/03/queensland-chinese-times.jpeg
 slug: 2025-11-15-singing-contest-final

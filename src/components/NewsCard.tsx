@@ -21,9 +21,7 @@ const NewsCard = (post: News) => {
         <Link href={postUrl}>
           <h2 className="card-title">{post.title}</h2>
         </Link>
-        <p className="text-sm">
-          {DateTime.fromJSDate(post.date).toFormat("LLLL dd, yyyy")}
-        </p>
+        <p className="text-sm">{DateTime.fromJSDate(post.date).toFormat("LLLL dd, yyyy")}</p>
         <p className="lg:max-w-2xs">{post.description}</p>
         <div className="card-actions justify-end">
           <Link href={postUrl} className="btn btn-primary rounded-field">
