@@ -4,8 +4,9 @@ Run the development server:
 
 ```bash
 nvm use
-npm i
-npm run dev
+corepack enable
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
