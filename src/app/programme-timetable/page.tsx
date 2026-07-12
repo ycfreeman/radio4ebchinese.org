@@ -1,5 +1,5 @@
 import HeroWithImage from "@/components/HeroWithImage";
-import { MDXContent } from "@content-collections/mdx/react";
+import ContentRenderer from "@/components/ContentRenderer";
 import { allPages } from "content-collections";
 import { ArrowRight } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
@@ -34,8 +34,8 @@ export default function Posts() {
       />
       <section className="container mx-auto my-8 p-4 max-w-4xl">
         <div className="prose max-w-none lg:prose-md">
-          <MDXContent
-            code={post.mdx}
+          <ContentRenderer
+            content={post.content}
             components={{
               ArrowRight,
             }}

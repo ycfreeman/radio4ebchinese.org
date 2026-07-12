@@ -1,8 +1,8 @@
 import { allPages, allNews } from "content-collections";
 
-import { MDXContent } from "@content-collections/mdx/react";
 import NewsCard from "@/components/NewsCard";
 import HeroWithImage from "@/components/HeroWithImage";
+import ContentRenderer from "@/components/ContentRenderer";
 
 export default function Home() {
   const post = allPages.find((post) => post._meta.path === "index")!;
@@ -19,7 +19,7 @@ export default function Home() {
 
       <section className="container mx-auto my-8 p-4 max-w-xxl">
         <div className="prose max-w-none lg:prose-md">
-          <MDXContent code={post.mdx} />
+          <ContentRenderer content={post.content} />
         </div>
       </section>
       {/* Additional sections (News, Footer, etc.) would follow similar conversion */}
