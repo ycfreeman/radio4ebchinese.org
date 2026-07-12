@@ -8,8 +8,7 @@ type ContentRendererProps = {
 };
 
 function ContentLink({ children, href, ...props }: ComponentProps<"a">) {
-  const isExternal =
-    typeof href === "string" && /^(?:https?:)?\/\//.test(href);
+  const isExternal = typeof href === "string" && /^(?:https?:)?\/\//.test(href);
 
   return (
     <a
@@ -23,10 +22,7 @@ function ContentLink({ children, href, ...props }: ComponentProps<"a">) {
   );
 }
 
-export default function ContentRenderer({
-  content,
-  components,
-}: ContentRendererProps) {
+export default function ContentRenderer({ content, components }: ContentRendererProps) {
   const mdast = mdxParse(content);
 
   return (

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURI(slug);
@@ -42,9 +42,7 @@ export default async function Page({ params }: Props) {
   return (
     <section className="container mx-auto my-8 p-4 max-w-4xl">
       <h2 className="text-3xl font-bold mb-2">{post.title}</h2>
-      <p className="text-sm mb-4">
-        {DateTime.fromJSDate(post.date).toFormat("LLLL dd, yyyy")}
-      </p>
+      <p className="text-sm mb-4">{DateTime.fromJSDate(post.date).toFormat("LLLL dd, yyyy")}</p>
       <div className="prose max-w-none lg:prose-md">
         <ContentRenderer content={post.content} />
       </div>

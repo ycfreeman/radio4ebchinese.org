@@ -41,7 +41,7 @@ slug: dc4eb
 
 Since the 40th anniversary, Durian Club has continued to grow and transform. From program times and hosting teams to formats and themes, we have made changes to meet the needs of our listeners, keeping the program fresh and full of surprises.
 
-The COVID pandemic brought many challenges, as hosts could not attend the studio or meet guests face to face. Thanks to technology, we continued broadcasting through Zoom and home recordings, and even reached across borders to interview Hong Kong.  These interviews gave Brisbane audiences a closer connection to overseas entertainment and culture.
+The COVID pandemic brought many challenges, as hosts could not attend the studio or meet guests face to face. Thanks to technology, we continued broadcasting through Zoom and home recordings, and even reached across borders to interview Hong Kong. These interviews gave Brisbane audiences a closer connection to overseas entertainment and culture.
 
 Today, our Saturday night line-up is more diverse than ever:
 
@@ -56,6 +56,6 @@ Looking ahead, Durian Club will continue to innovate and stay in tune with the t
 
 We also warmly invite those who love broadcasting to join us, share your ideas, and spend a lively Saturday night with the Durian Club family.
 
-- Instagram  [https://www.instagram.com/4ebdurianclub/](https://www.instagram.com/4ebdurianclub/)		
-- Facebook [https://www.facebook.com/Durianclub4eb](https://www.facebook.com/Durianclub4eb) 			
-- Youtube  [https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8](https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8)
+- Instagram [https://www.instagram.com/4ebdurianclub/](https://www.instagram.com/4ebdurianclub/)
+- Facebook [https://www.facebook.com/Durianclub4eb](https://www.facebook.com/Durianclub4eb)
+- Youtube [https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8](https://www.youtube.com/results?search_query=durian+club+%E6%A6%B4%E6%A7%A4%E4%BF%B1%E6%A8%82%E9%83%A8)

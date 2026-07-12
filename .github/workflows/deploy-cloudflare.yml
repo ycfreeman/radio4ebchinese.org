@@ -39,6 +39,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Check formatting
+        run: pnpm fmt:check
+
       - name: Build and deploy
         run: pnpm cf:deploy
         env:
