@@ -9,13 +9,12 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
 
 ## Contents
 
-Content is driven by this lib - https://github.com/sdorra/content-collections
-
-basically a bunch of `.md`/`.mdx` files in different folders
+Content is stored in Astro content collections under `src/content` as `.md` and
+`.mdx` files.
 
 ## Deployment
 
@@ -29,8 +28,7 @@ directly from the exported `out/` directory.
 pnpm cf:preview
 ```
 
-This exports the Next.js app and starts a local Cloudflare static-assets
-preview.
+This builds the Astro site and starts a local Cloudflare static-assets preview.
 
 ### Manual deployment
 

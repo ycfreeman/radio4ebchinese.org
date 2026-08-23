@@ -1,15 +1,15 @@
 ---
 title: Lala-Land
-featuredImage: /assets/img_1.png
+featuredImage: ../../assets/img_1.png
 galleryImage:
-  - /assets/img_1.png
-  - /assets/img_2.jpg
-  - /assets/img_3.jpg
-  - /assets/lala-land_1.jpg
-  - /assets/lala-land_2.jpg
-  - /assets/lala-land_3.jpg
-  - /assets/lala-land_4.jpg
-  - /assets/lala-land_5.jpg
+  - ../../assets/img_1.png
+  - ../../assets/img_2.jpg
+  - ../../assets/img_3.jpg
+  - ../../assets/lala-land_1.jpg
+  - ../../assets/lala-land_2.jpg
+  - ../../assets/lala-land_3.jpg
+  - ../../assets/lala-land_4.jpg
+  - ../../assets/lala-land_5.jpg
 slug: lala-land
 ---
 

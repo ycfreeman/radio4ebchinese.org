@@ -1,23 +1,23 @@
 ---
 title: 榴槤俱樂部
 galleryImage:
-  - /assets/2026/03/durianclub-1.jpg
-  - /assets/2026/03/durianclub-2.jpg
-  - /assets/2026/03/durianclub-3.jpg
-  - /assets/2026/03/durianclub-4.jpg
-  - /assets/2026/03/durianclub-5.jpg
-  - /assets/2026/03/durianclub-6.jpg
-  - /assets/2026/03/durianclub-7.jpg
-  - /assets/2026/03/durianclub-8.jpg
-  - /assets/2026/03/durianclub-9.jpg
-  - /assets/2026/03/durianclub-10.jpg
-  - /assets/2026/03/durianclub-11.jpg
-  - /assets/2026/03/durianclub-12.jpg
-  - /assets/2026/03/durianclub-13.jpeg
-  - /assets/2026/03/durianclub-14.jpg
-  - /assets/2026/03/durianclub-15.JPG
-  - /assets/2026/03/durianclub-16.jpg
-  - /assets/2026/03/durianclub-17.jpg
+  - ../../assets/2026/03/durianclub-1.jpg
+  - ../../assets/2026/03/durianclub-2.jpg
+  - ../../assets/2026/03/durianclub-3.jpg
+  - ../../assets/2026/03/durianclub-4.jpg
+  - ../../assets/2026/03/durianclub-5.jpg
+  - ../../assets/2026/03/durianclub-6.jpg
+  - ../../assets/2026/03/durianclub-7.jpg
+  - ../../assets/2026/03/durianclub-8.jpg
+  - ../../assets/2026/03/durianclub-9.jpg
+  - ../../assets/2026/03/durianclub-10.jpg
+  - ../../assets/2026/03/durianclub-11.jpg
+  - ../../assets/2026/03/durianclub-12.jpg
+  - ../../assets/2026/03/durianclub-13.jpeg
+  - ../../assets/2026/03/durianclub-14.jpg
+  - ../../assets/2026/03/durianclub-15.JPG
+  - ../../assets/2026/03/durianclub-16.jpg
+  - ../../assets/2026/03/durianclub-17.jpg
 slug: dc4eb
 ---
 

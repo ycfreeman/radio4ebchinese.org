@@ -1,0 +1,201 @@
+---
+import "@fontsource-variable/noto-sans-sc";
+import "@fontsource-variable/noto-sans-mono";
+import "@/styles/globals.css";
+import { getGroups } from "@/lib/content";
+import siteMetadata from "@/lib/site-metadata";
+
+interface Props {
+  pageTitle?: string;
+}
+
+const { pageTitle } = Astro.props;
+const title = pageTitle ? `${pageTitle} | ${siteMetadata.title}` : siteMetadata.title;
+const groups = await getGroups();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={siteMetadata.description} />
+    <link rel="icon" href="/favicon-32x32.png" sizes="any" />
+  </head>
+  <body class="antialiased font-sans drawer">
+    <div class="flex min-h-screen flex-col drawer-content">
+      <!-- Header -->
+      <header class="navbar w-full shadow-sm">
+        <div class="flex items-center gap-2 flex-1 md:flex-none">
+          <a href="/" class="text-md font-medium hover:text-primary">
+            <img
+              class="p-2"
+              src="/assets/logo.png"
+              alt={siteMetadata.title}
+              width="203"
+              height="80"
+            />
+          </a>
+        </div>
+        <div class="flex-none lg:hidden">
+          <label
+            for="my-drawer"
+            class="btn btn-ghost md:hidden drawer-button rounded-field"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+              <path d="M4 6h16"></path>
+            </svg>
+          </label>
+        </div>
+
+        <nav class="hidden md:flex gap-6 flex-1 justify-center">
+          <a href="/news" class="text-md font-medium hover:text-primary btn-ghost">
+            最新動態 | News
+          </a>
+
+          <span class="dropdown dropdown-hover">
+            <span tabindex="0" role="button" class="btn-ghost text-md font-medium m-1">
+              節目組 | Groups
+            </span>
+            <ul
+              tabindex="0"
+              class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            >
+              {
+                groups.map((post) => (
+                  <li>
+                    <a href={`/${post.data.slug}`} class="link link-hover">
+                      {post.data.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </span>
+
+          <a
+            href="/programme-timetable"
+            class="text-md font-medium hover:text-primary btn-ghost"
+          >
+            時間表 | Programme Timetable
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="https://www.4eb.org.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:flex btn btn-primary btn-sm gap-2 rounded-field"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+              aria-hidden="true"
+            >
+              <path d="m6 3 14 9-14 9z"></path>
+            </svg>
+            Listen Live on 4EB
+          </a>
+        </div>
+      </header>
+      <main class="flex-1"><slot /></main>
+      <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <aside>
+          <p>© {new Date().getFullYear()} - {siteMetadata.title}</p>
+        </aside>
+
+        <nav>
+          <h6 class="footer-title">節目組 | Groups</h6>
+          <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-x-6 gap-y-2">
+            {
+              groups.map((post) => (
+                <a href={`/${post.data.slug}`} class="link link-hover">
+                  {post.data.title}
+                </a>
+              ))
+            }
+          </div>
+        </nav>
+        <nav>
+          <a href="/" class="link link-hover">首頁 | Home</a>
+          <a href="/news" class="link link-hover">最新動態 | News</a>
+          <a href="/programme-timetable" class="link link-hover">
+            時間表 | Programme Timetable
+          </a>
+        </nav>
+      </footer>
+    </div>
+
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+
+    <!-- Sidebar -->
+    <div class="drawer-side">
+      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+
+      <ul class="menu bg-base-200 min-h-full w-80 p-4">
+        <!-- Sidebar content here -->
+        <li><a href="/news">最新動態 | News</a></li>
+        <li>
+          <p class="menu-title"> 節目組 | Groups</p>
+
+          <ul>
+            {
+              groups.map((post) => (
+                <li>
+                  <a href={`/${post.data.slug}`} class="link link-hover">
+                    {post.data.title}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </li>
+        <li><a href="/programme-timetable">時間表 | Programme Timetable</a></li>
+        <li class="mt-4">
+          <a
+            href="https://www.4eb.org.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex btn btn-primary btn-sm gap-2 rounded-field"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+              aria-hidden="true"
+            >
+              <path d="m6 3 14 9-14 9z"></path>
+            </svg>
+            Listen Live on 4EB
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

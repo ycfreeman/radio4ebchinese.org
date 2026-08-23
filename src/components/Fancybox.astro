@@ -1,0 +1,15 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+---
+
+<div data-fancybox-container><slot /></div>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+
+  document.querySelectorAll<HTMLElement>("[data-fancybox-container]").forEach((container) => {
+    Fancybox.bind(container, "[data-fancybox]", {
+      Carousel: { infinite: false },
+    });
+  });
+</script>

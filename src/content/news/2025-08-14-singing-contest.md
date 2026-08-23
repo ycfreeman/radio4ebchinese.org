@@ -2,13 +2,13 @@
 title: Radio 4EB (Chinese Group) & Chinese Ethnic Broadcasting Association of QLD Singing Contest 2025
 date: 2025-08-14T11:30:00.000+10:00
 description: "Radio 4EB (Chinese Group) & Chinese Ethnic Broadcasting Association of QLD Singing Contest 2025"
-featuredImage: /assets/poster-singing-contest-2025.png
+featuredImage: ../../assets/poster-singing-contest-2025.png
 galleryImage:
-  - /assets/poster-singing-contest-2025.png
+  - ../../assets/poster-singing-contest-2025.png
 slug: 2025-08-14-singing-contest
 ---
 
-![](/assets/poster-singing-contest-2025.png)
+![](../../assets/poster-singing-contest-2025.png)
 
 4EB 電台中文組及昆士蘭華語廣播協會主辦
 

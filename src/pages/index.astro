@@ -1,0 +1,35 @@
+---
+import { render } from "astro:content";
+import HeroWithImage from "@/components/HeroWithImage.astro";
+import NewsCard from "@/components/NewsCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getNews, getPage } from "@/lib/content";
+
+const [post, news] = await Promise.all([getPage(""), getNews()]);
+if (!post) throw new Error("Missing index content");
+const { Content } = await render(post);
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <HeroWithImage
+    alt={post.data.title}
+    heading={post.data.heading}
+    subheading={post.data.subheading}
+    featuredimage={post.data.featuredImage}
+  />
+
+  <section class="container mx-auto my-8 p-4 max-w-xxl">
+    <div class="prose max-w-none lg:prose-md">
+      <Content />
+    </div>
+  </section>
+  <!-- Additional sections (News, Footer, etc.) would follow similar conversion -->
+
+  <section class="container mx-auto my-8 p-4 max-w-xxl">
+    <h2 class="text-2xl font-bold mb-4">最新動態 | Latest stories</h2>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {news.toReversed().map((entry) => <NewsCard {...entry.data} />)}
+    </div>
+  </section>
+</BaseLayout>
