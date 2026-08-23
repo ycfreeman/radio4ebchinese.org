@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArrowRight from "./ArrowRight.astro";
+import { formatDate } from "@/lib/content";
+
+type Props = CollectionEntry<"news">["data"];
+
+const post = Astro.props;
+const postUrl = `/news/${post.slug}`;
+---
+
+<div class="card lg:card-side bg-neutral-100 shadow-sm">
+  <figure class="lg:min-w-[55%] sm:min-w-[30%]">
+    <img
+      src={post.featuredImage ?? "/placeholder.svg"}
+      alt="Album"
+      width="300"
+      height="300"
+    />
+  </figure>
+  <div class="card-body">
+    <a href={postUrl}>
+      <h2 class="card-title">{post.title}</h2>
+    </a>
+    <p class="text-sm">{formatDate(post.date)}</p>
+    <p class="lg:max-w-2xs">{post.description}</p>
+    <div class="card-actions justify-end">
+      <a href={postUrl} class="btn btn-primary rounded-field">
+        閱讀詳情 | Keep Reading <ArrowRight />
+      </a>
+    </div>
+  </div>
+</div>

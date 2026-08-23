@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import HeroWithImage from "@/components/HeroWithImage.astro";
+import ImageGallery from "@/components/ImageGallery.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getGroups } from "@/lib/content";
+
+export async function getStaticPaths() {
+  return (await getGroups()).map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"groups">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout pageTitle={post.data.title}>
+  {
+    post.data.featuredImage && (
+      <HeroWithImage
+        alt={post.data.title}
+        heading={post.data.title}
+        featuredimage={post.data.featuredImage}
+      />
+    )
+  }
+
+  <section class="container mx-auto my-8 p-4 max-w-4xl">
+    <h2 class="text-3xl font-bold mb-4">{post.data.title}</h2>
+    <div class="prose max-w-none lg:prose-md">
+      <Content />
+    </div>
+    <div class="my-4">
+      {post.data.galleryImage && <ImageGallery images={post.data.galleryImage} />}
+    </div>
+  </section>
+</BaseLayout>

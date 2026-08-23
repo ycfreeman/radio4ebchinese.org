@@ -1,0 +1,31 @@
+---
+import Fancybox from "./Fancybox.astro";
+
+interface Props {
+  images: string[];
+}
+
+const { images } = Astro.props;
+---
+
+<Fancybox>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {
+      images.map((image) => (
+        <a
+          class="block aspect-square shadow-sm overflow-hidden rounded-lg"
+          href={image}
+          data-fancybox="gallery"
+        >
+          <img
+            width="400"
+            height="400"
+            class="w-full h-full object-cover max-w-none"
+            src={image}
+            alt={image}
+          />
+        </a>
+      ))
+    }
+  </div>
+</Fancybox>

@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import ImageGallery from "@/components/ImageGallery.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { formatDate, getNews } from "@/lib/content";
+
+export async function getStaticPaths() {
+  return (await getNews()).map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"news">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout pageTitle={post.data.title}>
+  <section class="container mx-auto my-8 p-4 max-w-4xl">
+    <h2 class="text-3xl font-bold mb-2">{post.data.title}</h2>
+    <p class="text-sm mb-4">{formatDate(post.data.date)}</p>
+    <div class="prose max-w-none lg:prose-md">
+      <Content />
+    </div>
+    <div class="my-4">
+      {post.data.galleryImage && <ImageGallery images={post.data.galleryImage} />}
+    </div>
+  </section>
+</BaseLayout>

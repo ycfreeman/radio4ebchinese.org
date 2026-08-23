@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+:root {
+  --font-noto-sans-sc: "Noto Sans SC Variable", sans-serif;
+  --font-noto-sans-mono: "Noto Sans Mono Variable", monospace;
+}
+
 @theme {
   --font-sans: var(--font-noto-sans-sc);
   --font-mono: var(--font-noto-sans-mono);
