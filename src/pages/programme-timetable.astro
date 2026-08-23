@@ -15,7 +15,7 @@ const { Content } = await render(post);
     alt={post.data.title}
     heading={post.data.heading}
     subheading={post.data.subheading}
-    featuredimage={post.data.featuredImage ?? "/placeholder.svg"}
+    featuredimage={post.data.featuredImage}
   />
   <section class="container mx-auto my-8 p-4 max-w-4xl">
     <div class="prose max-w-none lg:prose-md">

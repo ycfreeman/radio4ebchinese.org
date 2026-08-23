@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 import ArrowRight from "./ArrowRight.astro";
 import { formatDate } from "@/lib/content";
 
@@ -10,12 +11,14 @@ const postUrl = `/news/${post.slug}`;
 ---
 
 <div class="card lg:card-side bg-neutral-100 shadow-sm">
-  <figure class="lg:min-w-[55%] sm:min-w-[30%]">
-    <img
-      src={post.featuredImage ?? "/placeholder.svg"}
+  <figure class="aspect-square lg:min-w-[55%] sm:min-w-[30%]">
+    <Image
+      src={post.featuredImage}
       alt="Album"
-      width="300"
-      height="300"
+      widths={[320, 480, 640, 960]}
+      sizes="(min-width: 1024px) 28vw, 100vw"
+      format="webp"
+      class="w-full h-full object-cover"
     />
   </figure>
   <div class="card-body">

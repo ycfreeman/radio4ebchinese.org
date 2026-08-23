@@ -1,8 +1,10 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import Fancybox from "./Fancybox.astro";
 
 interface Props {
-  images: string[];
+  images: ImageMetadata[];
 }
 
 const { images } = Astro.props;
@@ -14,15 +16,16 @@ const { images } = Astro.props;
       images.map((image) => (
         <a
           class="block aspect-square shadow-sm overflow-hidden rounded-lg"
-          href={image}
+          href={image.src}
           data-fancybox="gallery"
         >
-          <img
-            width="400"
-            height="400"
+          <Image
+            widths={[200, 320, 480, 640, 800]}
+            sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
+            format="webp"
             class="w-full h-full object-cover max-w-none"
             src={image}
-            alt={image}
+            alt={image.src}
           />
         </a>
       ))

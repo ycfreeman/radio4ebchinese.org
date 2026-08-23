@@ -1,6 +1,9 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 interface Props {
-  featuredimage: string;
+  featuredimage: ImageMetadata;
   alt: string;
   heading?: string;
   subheading?: string;
@@ -11,11 +14,14 @@ const post = Astro.props;
 
 <section class="hero">
   <div class="hero-overlay">
-    <img
+    <Image
       src={post.featuredimage}
       alt={post.alt}
-      width="1200"
-      height="600"
+      widths={[640, 960, 1280, 1600, 2048]}
+      sizes="100vw"
+      format="webp"
+      loading="eager"
+      fetchpriority="high"
       class="w-full lg:h-[400px] h-[300px] object-cover"
     />
   </div>

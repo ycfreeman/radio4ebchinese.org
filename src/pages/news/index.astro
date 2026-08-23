@@ -13,7 +13,7 @@ if (!post) throw new Error("Missing news page content");
     alt={post.data.title}
     heading={post.data.heading}
     subheading={post.data.subheading}
-    featuredimage={post.data.featuredImage ?? "/placeholder.svg"}
+    featuredimage={post.data.featuredImage}
   />
   <section class="container mx-auto my-8 p-4 max-w-xxl">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">

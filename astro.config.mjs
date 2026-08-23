@@ -9,6 +9,11 @@ export default defineConfig({
   output: "static",
   outDir: "./out",
   build: { format: "file" },
+  image: {
+    breakpoints: [320, 480, 640, 960, 1280, 1600, 2048],
+    layout: "constrained",
+    responsiveStyles: true,
+  },
   integrations: [mdx()],
   vite: { plugins: [tailwindcss()] },
   markdown: {

@@ -1,35 +1,42 @@
-import { defineCollection } from "astro:content";
+import { defineCollection, type ImageFunction } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-const sharedFields = {
+const sharedFields = (image: ImageFunction) => ({
   title: z.string(),
   description: z.string().optional(),
-  featuredImage: z.string().optional(),
-  galleryImage: z.array(z.string()).optional(),
+  galleryImage: z.array(image()).optional(),
   slug: z.string(),
-};
+});
 
 const news = defineCollection({
   loader: glob({ base: "./src/content/news", pattern: "**/*.{md,mdx}" }),
-  schema: z.object({
-    ...sharedFields,
-    date: z.coerce.date(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      ...sharedFields(image),
+      featuredImage: image(),
+      date: z.coerce.date(),
+    }),
 });
 
 const groups = defineCollection({
   loader: glob({ base: "./src/content/group", pattern: "**/*.{md,mdx}" }),
-  schema: z.object(sharedFields),
+  schema: ({ image }) =>
+    z.object({
+      ...sharedFields(image),
+      featuredImage: image().optional(),
+    }),
 });
 
 const pages = defineCollection({
   loader: glob({ base: "./src/content/pages", pattern: "**/*.{md,mdx}" }),
-  schema: z.object({
-    ...sharedFields,
-    heading: z.string().optional(),
-    subheading: z.string().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      ...sharedFields(image),
+      featuredImage: image(),
+      heading: z.string().optional(),
+      subheading: z.string().optional(),
+    }),
 });
 
 export const collections = { news, groups, pages };
