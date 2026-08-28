@@ -29,7 +29,7 @@
     "@astrojs/check": "0.9.10",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "4.3.3",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.3.0",
     "daisyui": "^5.7.20",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
