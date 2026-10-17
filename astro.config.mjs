@@ -4,6 +4,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "./src/lib/markdown.mjs";
+import pagefindDevServer from "./src/lib/pagefind-dev.mjs";
 
 export default defineConfig({
   site: "https://www.radio4ebchinese.org",
@@ -16,7 +17,7 @@ export default defineConfig({
     responsiveStyles: true,
   },
   integrations: [mdx(), react()],
-  vite: { plugins: [tailwindcss()] },
+  vite: { plugins: [tailwindcss(), pagefindDevServer()] },
   markdown: {
     processor: unified({
       gfm: true,

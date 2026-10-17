@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "test -d out/pagefind || pnpm build; astro dev",
     "build": "astro check && astro build && pagefind --site out --force-language zh",
     "start": "wrangler dev",
     "lint": "oxlint .",
