@@ -51,6 +51,6 @@ Configure these secrets in the repository's `production` environment:
 - `CLOUDFLARE_ACCOUNT_ID`: the target Cloudflare account ID
 - `CLOUDFLARE_API_TOKEN`: a token scoped to that account, created from the
   **Edit Cloudflare Workers** template plus _Zone - DNS - Edit_ and
-  _Zone - Page Rules - Edit_ for the `radio4ebchinese.org` zone
+  _Zone - Single Redirect - Edit_ for the `radio4ebchinese.org` zone
 
 Do not commit Cloudflare credentials.
