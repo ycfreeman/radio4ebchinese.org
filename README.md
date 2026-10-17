@@ -1,10 +1,9 @@
 ## Getting Started
 
-Run the development server:
+Install [mise](https://mise.jdx.dev) and [activate it in your shell](https://mise.jdx.dev/getting-started.html#activate-mise) so the pinned Node and pnpm are on `PATH`. Then run the development server:
 
 ```bash
-nvm use
-corepack enable
+mise install
 pnpm install
 pnpm dev
 ```
