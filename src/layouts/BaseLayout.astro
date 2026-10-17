@@ -10,9 +10,10 @@ import siteMetadata from "@/lib/site-metadata";
 
 interface Props {
   pageTitle?: string;
+  searchable?: boolean;
 }
 
-const { pageTitle } = Astro.props;
+const { pageTitle, searchable = true } = Astro.props;
 const title = pageTitle ? `${pageTitle} | ${siteMetadata.title}` : siteMetadata.title;
 const groups = await getGroups();
 ---
@@ -25,12 +26,15 @@ const groups = await getGroups();
     <title>{title}</title>
     <meta name="description" content={siteMetadata.description} />
     <link rel="icon" href="/favicon-32x32.png" sizes="any" />
+    <meta data-pagefind-meta="title[content]" content={pageTitle ?? siteMetadata.title} />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" />
+    <script is:inline src="/pagefind/pagefind-component-ui.js" type="module"></script>
   </head>
   <body class="antialiased font-sans drawer">
     <div class="flex min-h-screen flex-col drawer-content">
       <!-- Header -->
       <SiteHeader groups={groups} />
-      <main class="flex-1"><slot /></main>
+      <main class="flex-1" data-pagefind-body={searchable || undefined}><slot /></main>
       <SiteFooter groups={groups} />
     </div>
 

@@ -32,7 +32,7 @@ const [heroImage, cards] = await Promise.all([
 
   <section class="container mx-auto my-8 p-4 max-w-xxl">
     <h2 class="text-2xl font-bold mb-4">最新動態 | Latest stories</h2>
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2" data-pagefind-ignore>
       {cards.map((card) => <NewsCard {...card} />)}
     </div>
   </section>
