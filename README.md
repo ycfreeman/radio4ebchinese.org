@@ -3,8 +3,7 @@
 Run the development server:
 
 ```bash
-nvm use
-corepack enable
+mise install
 pnpm install
 pnpm dev
 ```
