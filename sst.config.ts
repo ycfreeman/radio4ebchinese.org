@@ -38,9 +38,9 @@ export default $config({
       ttl: 1,
     });
 
-    new cloudflare.Ruleset("ApexRedirect", {
+    new cloudflare.Ruleset("Redirects", {
       zoneId: zone.id,
-      name: "Apex redirect",
+      name: "Redirects",
       kind: "zone",
       phase: "http_request_dynamic_redirect",
       rules: [
@@ -52,6 +52,19 @@ export default $config({
               statusCode: 301,
               targetUrl: {
                 expression: 'concat("https://www.radio4ebchinese.org", http.request.uri.path)',
+              },
+              preserveQueryString: true,
+            },
+          },
+        },
+        {
+          action: "redirect",
+          expression: "not ssl",
+          actionParameters: {
+            fromValue: {
+              statusCode: 301,
+              targetUrl: {
+                expression: 'concat("https://", http.host, http.request.uri.path)',
               },
               preserveQueryString: true,
             },
