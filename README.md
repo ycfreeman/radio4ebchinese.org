@@ -17,29 +17,29 @@ Content is stored in Astro content collections under `src/content` as `.md` and
 
 ## Deployment
 
-The site is exported as static HTML and deployed to Cloudflare Static Assets
-with Wrangler. There is no user Worker entrypoint, so requests are served
-directly from the exported `out/` directory.
+The site is exported as static HTML and deployed to Cloudflare Workers static
+assets with [SST](https://sst.dev), configured in [`sst.config.ts`](sst.config.ts).
+SST stores its state in Cloudflare R2.
 
-### Local Cloudflare preview
+### Local preview
 
 ```bash
-pnpm cf:preview
+pnpm build
+pnpm start
 ```
-
-This builds the Astro site and starts a local Cloudflare static-assets preview.
 
 ### Manual deployment
 
-Authenticate Wrangler with `pnpm wrangler login`, then run:
+Set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_DEFAULT_ACCOUNT_ID`, then run:
 
 ```bash
 pnpm cf:deploy
 ```
 
-The first deployment uses the generated `workers.dev` URL. Verify that URL
-before attaching `www.radio4ebchinese.org` as a Cloudflare Custom Domain. Keep
-the apex-domain redirect to `https://www.radio4ebchinese.org` when moving DNS.
+Only the `production` stage attaches `www.radio4ebchinese.org` as a Cloudflare
+Custom Domain. Other stages, such as `pnpm sst deploy --stage test`, are served
+from their generated `workers.dev` URL. Keep the apex-domain redirect to
+`https://www.radio4ebchinese.org`; SST does not manage it.
 
 ### GitHub Actions deployment
 
@@ -49,7 +49,8 @@ The workflow can also be started manually from GitHub Actions.
 Configure these secrets in the repository's `production` environment:
 
 - `CLOUDFLARE_ACCOUNT_ID`: the target Cloudflare account ID
-- `CLOUDFLARE_API_TOKEN`: a token scoped to that account with Workers edit
-  access
+- `CLOUDFLARE_API_TOKEN`: a token scoped to that account, created from the
+  **Edit Cloudflare Workers** template plus _Zone - DNS - Edit_ for the
+  `radio4ebchinese.org` zone
 
-Do not commit Cloudflare credentials or local `.dev.vars` files.
+Do not commit Cloudflare credentials.
