@@ -1,3 +1,5 @@
+/* Astro injects its responsive image styles in this layer, sometimes after this file. Declaring it first keeps it below Tailwind utilities. */
+@layer astro.images;
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 

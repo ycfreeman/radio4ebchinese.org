@@ -17,31 +17,31 @@
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "7.2.4",
-    "@astrojs/mdx": "7.0.7",
+    "@astrojs/markdown-remark": "7.3.3",
+    "@astrojs/mdx": "8.1.0",
     "@astrojs/react": "7.1.0",
-    "@fancyapps/ui": "^6.1.14",
+    "@fancyapps/ui": "^6.1.15",
     "@fontsource-variable/noto-sans-mono": "^5.3.0",
-    "@fontsource-variable/noto-sans-sc": "^5.3.0",
-    "astro": "7.2.4",
+    "@fontsource-variable/noto-sans-sc": "^5.3.1",
+    "astro": "7.4.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "sharp": "0.35.3"
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "4.3.3",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "daisyui": "^5.7.20",
-    "oxfmt": "^0.64.0",
-    "oxlint": "^1.79.0",
+    "daisyui": "^5.7.50",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
     "pagefind": "1.5.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "wrangler": "^4.125.0"
+    "wrangler": "^4.151.0"
   },
   "engines": {
     "node": ">=26.0.0 <27"
