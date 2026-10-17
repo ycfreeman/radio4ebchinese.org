@@ -1,5 +1,6 @@
 import mdx from "@astrojs/mdx";
 import { unified } from "@astrojs/markdown-remark";
+import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "./src/lib/markdown.mjs";
@@ -14,7 +15,7 @@ export default defineConfig({
     layout: "constrained",
     responsiveStyles: true,
   },
-  integrations: [mdx()],
+  integrations: [mdx(), react()],
   vite: { plugins: [tailwindcss()] },
   markdown: {
     processor: unified({

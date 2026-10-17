@@ -1,23 +1,27 @@
 ---
-import HeroWithImage from "@/components/HeroWithImage.astro";
-import NewsCard from "@/components/NewsCard.astro";
+import HeroWithImage, { getHeroImage } from "@/components/HeroWithImage";
+import NewsCard, { getNewsCards } from "@/components/NewsCard";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getNews, getPage } from "@/lib/content";
 
 const [post, news] = await Promise.all([getPage("news"), getNews()]);
 if (!post) throw new Error("Missing news page content");
+const [heroImage, cards] = await Promise.all([
+  getHeroImage(post.data.featuredImage),
+  getNewsCards(news),
+]);
 ---
 
 <BaseLayout pageTitle={post.data.title}>
   <HeroWithImage
+    image={heroImage}
     alt={post.data.title}
     heading={post.data.heading}
     subheading={post.data.subheading}
-    featuredimage={post.data.featuredImage}
   />
   <section class="container mx-auto my-8 p-4 max-w-xxl">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      {news.toReversed().map((entry) => <NewsCard {...entry.data} />)}
+      {cards.map((card) => <NewsCard {...card} />)}
     </div>
   </section>
 </BaseLayout>
