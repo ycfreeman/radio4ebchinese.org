@@ -19,7 +19,10 @@ export default $config({
         output: "out",
       },
       notFound: "404",
-      domain: $app.stage === "production" ? "www.radio4ebchinese.org" : undefined,
+      domain:
+        $app.stage === "production"
+          ? { name: "www.radio4ebchinese.org", redirects: ["radio4ebchinese.org"] }
+          : undefined,
     });
   },
 });
