@@ -7,7 +7,7 @@ interface Props {
 
 export default function SiteHeader({ groups }: Props) {
   return (
-    <header className="navbar w-full shadow-sm">
+    <header className="navbar w-full shadow-sm flex-wrap">
       <div className="flex items-center gap-2 flex-1 md:flex-none">
         <a href="/" className="text-md font-medium hover:text-primary">
           <img
@@ -66,13 +66,13 @@ export default function SiteHeader({ groups }: Props) {
         <a href="/programme-timetable" className="text-md font-medium hover:text-primary btn-ghost">
           時間表 | Programme Timetable
         </a>
-
-        <a href="/search" className="text-md font-medium hover:text-primary btn-ghost">
-          搜尋 | Search
-        </a>
       </nav>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 w-full xl:w-auto">
+        {/* Pagefind resets its host element with `all: initial`, so size the wrapper. */}
+        <div className="flex-1 xl:flex-none xl:w-64">
+          <pagefind-searchbox placeholder="搜尋 | Search"></pagefind-searchbox>
+        </div>
         <a
           href="https://www.4eb.org.au/"
           target="_blank"
