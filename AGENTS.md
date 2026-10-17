@@ -14,6 +14,6 @@ The audit is a GitHub issue titled `Package audit: YYYY-MM` that reports finding
 
 - outdated npm packages, with breaking-change notes from each package's release notes for major bumps
 - `pnpm audit` vulnerabilities
-- GitHub Actions `uses:` refs against their latest releases
+- every GitHub Actions `uses:` ref in `.github/workflows/` against its latest release, including whether a floating major tag such as `@v6` still points at an older release (`git ls-remote --tags`), and the Node runtime each action declares
 - the Node and pnpm toolchain pins, including whether the TypeScript and pnpm pins above can now be lifted, tested on a scratch copy of the repo
 - unused dependencies
