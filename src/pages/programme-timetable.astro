@@ -1,21 +1,22 @@
 ---
 import { render } from "astro:content";
-import ArrowRight from "@/components/ArrowRight.astro";
-import HeroWithImage from "@/components/HeroWithImage.astro";
+import ArrowRight from "@/components/ArrowRight";
+import HeroWithImage, { getHeroImage } from "@/components/HeroWithImage";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getPage } from "@/lib/content";
 
 const post = await getPage("programme-timetable");
 if (!post) throw new Error("Missing programme timetable content");
 const { Content } = await render(post);
+const heroImage = await getHeroImage(post.data.featuredImage);
 ---
 
 <BaseLayout pageTitle={post.data.title}>
   <HeroWithImage
+    image={heroImage}
     alt={post.data.title}
     heading={post.data.heading}
     subheading={post.data.subheading}
-    featuredimage={post.data.featuredImage}
   />
   <section class="container mx-auto my-8 p-4 max-w-4xl">
     <div class="prose max-w-none lg:prose-md">

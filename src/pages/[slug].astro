@@ -1,8 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
-import HeroWithImage from "@/components/HeroWithImage.astro";
-import ImageGallery from "@/components/ImageGallery.astro";
+import Fancybox from "@/components/Fancybox.astro";
+import HeroWithImage, { getHeroImage } from "@/components/HeroWithImage";
+import ImageGallery, { getGalleryImages } from "@/components/ImageGallery";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getGroups } from "@/lib/content";
 
@@ -19,16 +20,16 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const [heroImage, gallery] = await Promise.all([
+  post.data.featuredImage && getHeroImage(post.data.featuredImage),
+  post.data.galleryImage && getGalleryImages(post.data.galleryImage),
+]);
 ---
 
 <BaseLayout pageTitle={post.data.title}>
   {
-    post.data.featuredImage && (
-      <HeroWithImage
-        alt={post.data.title}
-        heading={post.data.title}
-        featuredimage={post.data.featuredImage}
-      />
+    heroImage && (
+      <HeroWithImage image={heroImage} alt={post.data.title} heading={post.data.title} />
     )
   }
 
@@ -38,7 +39,13 @@ const { Content } = await render(post);
       <Content />
     </div>
     <div class="my-4">
-      {post.data.galleryImage && <ImageGallery images={post.data.galleryImage} />}
+      {
+        gallery && (
+          <Fancybox>
+            <ImageGallery images={gallery} />
+          </Fancybox>
+        )
+      }
     </div>
   </section>
 </BaseLayout>

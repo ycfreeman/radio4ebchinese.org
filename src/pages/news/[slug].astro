@@ -1,7 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
-import ImageGallery from "@/components/ImageGallery.astro";
+import Fancybox from "@/components/Fancybox.astro";
+import ImageGallery, { getGalleryImages } from "@/components/ImageGallery";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { formatDate, getNews } from "@/lib/content";
 
@@ -18,6 +19,7 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const gallery = post.data.galleryImage && (await getGalleryImages(post.data.galleryImage));
 ---
 
 <BaseLayout pageTitle={post.data.title}>
@@ -28,7 +30,13 @@ const { Content } = await render(post);
       <Content />
     </div>
     <div class="my-4">
-      {post.data.galleryImage && <ImageGallery images={post.data.galleryImage} />}
+      {
+        gallery && (
+          <Fancybox>
+            <ImageGallery images={gallery} />
+          </Fancybox>
+        )
+      }
     </div>
   </section>
 </BaseLayout>
