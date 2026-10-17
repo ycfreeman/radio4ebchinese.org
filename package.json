@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && pagefind --site out --force-language zh",
     "start": "wrangler dev",
     "lint": "oxlint .",
     "fmt": "oxfmt .",
@@ -38,6 +38,7 @@
     "daisyui": "^5.7.20",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
+    "pagefind": "1.5.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "wrangler": "^4.125.0"

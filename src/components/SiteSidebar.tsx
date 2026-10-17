@@ -30,6 +30,9 @@ export default function SiteSidebar({ groups }: Props) {
         <li>
           <a href="/programme-timetable">時間表 | Programme Timetable</a>
         </li>
+        <li>
+          <a href="/search">搜尋 | Search</a>
+        </li>
         <li className="mt-4">
           <a
             href="https://www.4eb.org.au/"

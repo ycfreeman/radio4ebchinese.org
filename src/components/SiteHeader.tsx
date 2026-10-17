@@ -66,6 +66,10 @@ export default function SiteHeader({ groups }: Props) {
         <a href="/programme-timetable" className="text-md font-medium hover:text-primary btn-ghost">
           時間表 | Programme Timetable
         </a>
+
+        <a href="/search" className="text-md font-medium hover:text-primary btn-ghost">
+          搜尋 | Search
+        </a>
       </nav>
 
       <div className="flex items-center gap-4">
