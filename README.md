@@ -37,9 +37,9 @@ pnpm cf:deploy
 ```
 
 Only the `production` stage attaches `www.radio4ebchinese.org` as a Cloudflare
-Custom Domain. Other stages, such as `pnpm sst deploy --stage test`, are served
-from their generated `workers.dev` URL. Keep the apex-domain redirect to
-`https://www.radio4ebchinese.org`; SST does not manage it.
+Custom Domain and redirects the apex `radio4ebchinese.org` to it. Other stages,
+such as `pnpm sst deploy --stage test`, are served from their generated
+`workers.dev` URL.
 
 ### GitHub Actions deployment
 
@@ -50,7 +50,7 @@ Configure these secrets in the repository's `production` environment:
 
 - `CLOUDFLARE_ACCOUNT_ID`: the target Cloudflare account ID
 - `CLOUDFLARE_API_TOKEN`: a token scoped to that account, created from the
-  **Edit Cloudflare Workers** template plus _Zone - DNS - Edit_ for the
-  `radio4ebchinese.org` zone
+  **Edit Cloudflare Workers** template plus _Zone - DNS - Edit_ and
+  _Zone - Page Rules - Edit_ for the `radio4ebchinese.org` zone
 
 Do not commit Cloudflare credentials.
