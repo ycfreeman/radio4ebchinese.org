@@ -9,5 +9,5 @@
     }
   },
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["out"]
+  "exclude": ["out", ".sst", "sst.config.ts"]
 }
