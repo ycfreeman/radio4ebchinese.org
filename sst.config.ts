@@ -13,16 +13,51 @@ export default $config({
     };
   },
   async run() {
+    const production = $app.stage === "production";
+
     new sst.cloudflare.StaticSiteV2("Site", {
       build: {
         command: "pnpm build",
         output: "out",
       },
       notFound: "404",
-      domain:
-        $app.stage === "production"
-          ? { name: "www.radio4ebchinese.org", redirects: ["radio4ebchinese.org"] }
-          : undefined,
+      domain: production ? "www.radio4ebchinese.org" : undefined,
+    });
+
+    if (!production) return;
+
+    // SST's `domain.redirects` uses Page Rules, which reject account-owned API tokens.
+    const zone = cloudflare.getZoneOutput({ filter: { name: "radio4ebchinese.org" } });
+
+    new cloudflare.DnsRecord("ApexRecord", {
+      zoneId: zone.id,
+      name: "radio4ebchinese.org",
+      type: "AAAA",
+      content: "100::",
+      proxied: true,
+      ttl: 1,
+    });
+
+    new cloudflare.Ruleset("ApexRedirect", {
+      zoneId: zone.id,
+      name: "Apex redirect",
+      kind: "zone",
+      phase: "http_request_dynamic_redirect",
+      rules: [
+        {
+          action: "redirect",
+          expression: 'http.host eq "radio4ebchinese.org"',
+          actionParameters: {
+            fromValue: {
+              statusCode: 301,
+              targetUrl: {
+                expression: 'concat("https://www.radio4ebchinese.org", http.request.uri.path)',
+              },
+              preserveQueryString: true,
+            },
+          },
+        },
+      ],
     });
   },
 });
